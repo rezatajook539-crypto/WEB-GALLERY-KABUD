@@ -1,0 +1,2 @@
+# BLUE-ART-GALLARY
+The Blue Gallery website is a site dedicated to showcasing the Dutch painter and artist Johannes Vermeer, his works, biography, and technique, as well as the addresses of museums that have his works, for art enthusiasts.

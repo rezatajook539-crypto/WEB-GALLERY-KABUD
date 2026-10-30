@@ -1,0 +1,57 @@
+/* ==========================================================
+   KABUD | Vermeer Gallery - Biography page
+   Load order: index-style.css, responsive.css, technique.css, biography.css
+   (the pillars, feature-reverse and hero-page styles come from technique.css)
+   ========================================================== */
+
+/* ========== TIMELINE ========== */
+.timeline-section {
+  width: 90%;
+  margin: 60px auto;
+}
+
+.timeline {
+  margin-top: 30px;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 24px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.timeline-year {
+  width: 130px;
+  flex-shrink: 0;
+  color: var(--accent);
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.timeline-body {
+  flex: 1;
+}
+
+.timeline-body h3 {
+  margin-bottom: 6px;
+  font-size: 18px;
+}
+
+/* Hard times use the blue accent so they stand apart from the life timeline */
+.hardships .timeline-year {
+  color: var(--star);
+}
+
+/* ========== MOBILE ========== */
+@media (max-width: 768px) {
+  .timeline-item {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .timeline-year {
+    width: auto;
+    font-size: 22px;
+  }
+}

@@ -1,0 +1,162 @@
+/* ==========================================================
+   KABUD | Vermeer Gallery - Technique page
+   Load order: index-style.css, responsive.css, technique.css
+   ========================================================== */
+
+/* Current page in the navbar */
+.nav-links a[aria-current="page"] {
+  color: var(--accent);
+}
+
+/* ========== PAGE HERO (shorter than the home hero) ========== */
+.hero-page {
+  min-height: auto;
+  padding-bottom: 40px;
+}
+
+/* ========== PILLARS: four secrets ========== */
+.pillars {
+  width: 90%;
+  margin: 60px auto;
+}
+
+.pillar-grid {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.pillar {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background-color: var(--bg-card);
+  border-radius: 14px;
+}
+
+.pillar-num {
+  color: var(--accent);
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.pillar h3 {
+  font-size: 18px;
+}
+
+.pillar p {
+  font-size: 14px;
+}
+
+/* ========== FEATURE: reversed version (image on the opposite side) ========== */
+.feature-reverse {
+  flex-direction: row-reverse;
+}
+
+.feature-reverse .feature-img {
+  margin-inline-start: 0;
+  margin-inline-end: 10px;
+}
+
+.feature-reverse .feature-text {
+  margin-inline-end: 0;
+  margin-inline-start: 80px;
+}
+
+/* ========== PALETTE ========== */
+.palette {
+  width: 90%;
+  margin: 60px auto;
+}
+
+.swatches {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.swatch {
+  flex: 1;
+}
+
+.swatch-color {
+  height: 90px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+}
+
+.swatch h3 {
+  margin-top: 12px;
+  font-size: 16px;
+}
+
+.swatch p {
+  margin-top: 4px;
+  font-size: 13px;
+}
+
+.swatch-ultramarine { background-color: #2E4A9E; }
+.swatch-yellow      { background-color: #E0B04A; }
+.swatch-vermilion   { background-color: #D6402B; }
+.swatch-white       { background-color: #EEE8DA; }
+.swatch-madder      { background-color: #A3374E; }
+
+.palette-note {
+  margin-top: 24px;
+  font-size: 13px;
+}
+
+/* ==========================================================
+   TABLET (up to 1024px)
+   ========================================================== */
+@media (max-width: 1024px) {
+  .pillar-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .feature-reverse .feature-text {
+    margin-inline-start: 30px;
+  }
+}
+
+/* ==========================================================
+   MOBILE (up to 768px)
+   ========================================================== */
+@media (max-width: 768px) {
+  .feature-reverse {
+    flex-direction: column;
+  }
+
+  .feature-reverse .feature-img {
+    margin-inline-end: 0;
+  }
+
+  .feature-reverse .feature-text {
+    margin-inline-start: 0;
+  }
+
+  .swatches {
+    flex-wrap: wrap;
+    row-gap: 20px;
+  }
+
+  .swatch {
+    flex: 0 0 47%;
+  }
+}
+
+/* ==========================================================
+   SMALL PHONES (up to 480px)
+   ========================================================== */
+@media (max-width: 480px) {
+  .pillar-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .swatch {
+    flex: 0 0 100%;
+  }
+}
